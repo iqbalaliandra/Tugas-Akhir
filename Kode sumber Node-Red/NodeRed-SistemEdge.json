@@ -1,0 +1,1592 @@
+[
+    {
+        "id": "cb81b7268ae839a2",
+        "type": "tab",
+        "label": "OPC-UA and MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1f8d29975e570e91",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=6",
+        "datatype": "String",
+        "value": "",
+        "name": "ProcessValue",
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "d24ebea37ff5e54e"
+            ]
+        ]
+    },
+    {
+        "id": "d24ebea37ff5e54e",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 440,
+        "wires": [
+            [
+                "3d94d6fe83462b81"
+            ]
+        ]
+    },
+    {
+        "id": "619d08416db6d19f",
+        "type": "inject",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "269199a508cbf499",
+                "cf9d0ce3f2bbc9e5",
+                "0e4322ec49f58a28",
+                "e3ce7269b1565ef8",
+                "bfdc4f0afff75d65",
+                "1f8d29975e570e91",
+                "e44da6947753847e",
+                "81647b92466f3415",
+                "6963f52cb8419902",
+                "44de12420a711b88"
+            ]
+        ]
+    },
+    {
+        "id": "e44da6947753847e",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=7",
+        "datatype": "String",
+        "value": "",
+        "name": "ManipulatedValue",
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "471db45c14776434"
+            ]
+        ]
+    },
+    {
+        "id": "471db45c14776434",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "10c99f1121c49fd8"
+            ]
+        ]
+    },
+    {
+        "id": "bfdc4f0afff75d65",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=8",
+        "datatype": "String",
+        "value": "",
+        "name": "Setpoint",
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "72e626a2f9ab8c51"
+            ]
+        ]
+    },
+    {
+        "id": "72e626a2f9ab8c51",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "50e2196a8bf6e024"
+            ]
+        ]
+    },
+    {
+        "id": "0e4322ec49f58a28",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=2",
+        "datatype": "String",
+        "value": "",
+        "name": "Level",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "f54e1cc36831c543"
+            ]
+        ]
+    },
+    {
+        "id": "f54e1cc36831c543",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "c0f169b80691fd23"
+            ]
+        ]
+    },
+    {
+        "id": "e3ce7269b1565ef8",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=3",
+        "datatype": "String",
+        "value": "",
+        "name": "Flow",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "93a9f2fdb5103208"
+            ]
+        ]
+    },
+    {
+        "id": "93a9f2fdb5103208",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 280,
+        "wires": [
+            [
+                "07c8798f4b253c57"
+            ]
+        ]
+    },
+    {
+        "id": "cf9d0ce3f2bbc9e5",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=4",
+        "datatype": "String",
+        "value": "",
+        "name": "Pressure",
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "9ce6ef261ee20824"
+            ]
+        ]
+    },
+    {
+        "id": "9ce6ef261ee20824",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "bf4869c720ee9915"
+            ]
+        ]
+    },
+    {
+        "id": "269199a508cbf499",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=5",
+        "datatype": "String",
+        "value": "",
+        "name": "Temperature",
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "f549f4f86c394419"
+            ]
+        ]
+    },
+    {
+        "id": "f549f4f86c394419",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 100,
+        "wires": [
+            [
+                "4b09ec45ef4cde5a"
+            ]
+        ]
+    },
+    {
+        "id": "4b09ec45ef4cde5a",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Temperature",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 850,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bf4869c720ee9915",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Pressure",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 840,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "07c8798f4b253c57",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Flow",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 830,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c0f169b80691fd23",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Level",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0b9112c333d447cb",
+        "type": "comment",
+        "z": "cb81b7268ae839a2",
+        "name": "OPC-UA to MQTT to Software (Monitoring Page)",
+        "info": "",
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1fa8633335e9d6ce",
+        "type": "mqtt in",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Control setpoint",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "9f42ad3f5730eefb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 820,
+        "wires": [
+            [
+                "1beb308491cf7507"
+            ]
+        ]
+    },
+    {
+        "id": "26c3935c53660e68",
+        "type": "comment",
+        "z": "cb81b7268ae839a2",
+        "name": "OPC-UA to MQTT to Software (Control & Trend Page)",
+        "info": "",
+        "x": 520,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "393c4bedc970cbb2",
+        "type": "comment",
+        "z": "cb81b7268ae839a2",
+        "name": "Software (Control Page) to MQTT to OPC-UA ",
+        "info": "",
+        "x": 490,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a48d9fc073d0cc12",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 860,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05117b9bc22c08de",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=8",
+        "datatype": "Float",
+        "value": "",
+        "name": "Setpoint",
+        "x": 620,
+        "y": 820,
+        "wires": [
+            [
+                "a48d9fc073d0cc12"
+            ]
+        ]
+    },
+    {
+        "id": "1beb308491cf7507",
+        "type": "change",
+        "z": "cb81b7268ae839a2",
+        "name": "String to Num",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)\t",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 820,
+        "wires": [
+            [
+                "05117b9bc22c08de"
+            ]
+        ]
+    },
+    {
+        "id": "50e2196a8bf6e024",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Setpoint",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 840,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3d94d6fe83462b81",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Process Variable",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "10c99f1121c49fd8",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Controller Output",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 870,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "072cc25f82c3fae1",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=13",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Select No",
+        "x": 560,
+        "y": 920,
+        "wires": [
+            [
+                "6903e7fb65275aec"
+            ]
+        ]
+    },
+    {
+        "id": "6903e7fb65275aec",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 760,
+        "y": 920,
+        "wires": [
+            [
+                "dc7ec21987a45470"
+            ]
+        ]
+    },
+    {
+        "id": "c08606f21fe04c56",
+        "type": "mqtt in",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Select Loop",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "9f42ad3f5730eefb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 920,
+        "wires": [
+            [
+                "87f03dd216486859"
+            ]
+        ]
+    },
+    {
+        "id": "51dc59eddee092e2",
+        "type": "switch",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "property": "selectLoop",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Pressure",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Level",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Flow",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 1170,
+        "y": 860,
+        "wires": [
+            [
+                "ea37c4c3b173e576"
+            ],
+            [
+                "fd644862db06920f"
+            ],
+            [
+                "d4fe49d8dd709493"
+            ],
+            [
+                "beb4ebe9d458eceb"
+            ]
+        ]
+    },
+    {
+        "id": "dc7ec21987a45470",
+        "type": "switch",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 920,
+        "wires": [
+            [
+                "51dc59eddee092e2"
+            ],
+            [
+                "e7e4fcec785ab47f"
+            ]
+        ]
+    },
+    {
+        "id": "ea37c4c3b173e576",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=12",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Temperature",
+        "x": 1410,
+        "y": 840,
+        "wires": [
+            [
+                "16431def5385984e"
+            ]
+        ]
+    },
+    {
+        "id": "fd644862db06920f",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=11",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Pressure",
+        "x": 1420,
+        "y": 880,
+        "wires": [
+            [
+                "16431def5385984e"
+            ]
+        ]
+    },
+    {
+        "id": "d4fe49d8dd709493",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=10",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Level",
+        "x": 1430,
+        "y": 920,
+        "wires": [
+            [
+                "16431def5385984e"
+            ]
+        ]
+    },
+    {
+        "id": "beb4ebe9d458eceb",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=9",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Flow",
+        "x": 1450,
+        "y": 960,
+        "wires": [
+            [
+                "16431def5385984e"
+            ]
+        ]
+    },
+    {
+        "id": "16431def5385984e",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 1720,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87f03dd216486859",
+        "type": "change",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "selectLoop",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "072cc25f82c3fae1"
+            ]
+        ]
+    },
+    {
+        "id": "e7e4fcec785ab47f",
+        "type": "switch",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "property": "selectLoop",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Pressure",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Level",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Flow",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Stop",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 1170,
+        "y": 1040,
+        "wires": [
+            [
+                "e09cf8327c156ec8"
+            ],
+            [
+                "759eb85cc8b3c369"
+            ],
+            [
+                "10c02d4608069148"
+            ],
+            [
+                "4e81889d72784930"
+            ],
+            [
+                "8e6b28051399c7fa",
+                "b10204dd8e79f33c",
+                "cc92ebeaa5847482",
+                "f37b0753da35b2ba"
+            ]
+        ]
+    },
+    {
+        "id": "e09cf8327c156ec8",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=12",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Temperature",
+        "x": 1410,
+        "y": 1020,
+        "wires": [
+            [
+                "a2586925daf98b51"
+            ]
+        ]
+    },
+    {
+        "id": "759eb85cc8b3c369",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=11",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Pressure",
+        "x": 1420,
+        "y": 1060,
+        "wires": [
+            [
+                "a2586925daf98b51"
+            ]
+        ]
+    },
+    {
+        "id": "10c02d4608069148",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=10",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Select Level",
+        "x": 1430,
+        "y": 1100,
+        "wires": [
+            [
+                "a2586925daf98b51"
+            ]
+        ]
+    },
+    {
+        "id": "4e81889d72784930",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=9",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "Flow",
+        "x": 1450,
+        "y": 1140,
+        "wires": [
+            [
+                "a2586925daf98b51"
+            ]
+        ]
+    },
+    {
+        "id": "10517df3848ee06e",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 1940,
+        "y": 1040,
+        "wires": [
+            [
+                "11f42fa185cd9b51"
+            ]
+        ]
+    },
+    {
+        "id": "a2586925daf98b51",
+        "type": "loop",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "kind": "fcnt",
+        "count": "3",
+        "initial": "0",
+        "step": "1",
+        "condition": "",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-count",
+        "x": 1730,
+        "y": 1040,
+        "wires": [
+            [],
+            [
+                "10517df3848ee06e"
+            ]
+        ]
+    },
+    {
+        "id": "11f42fa185cd9b51",
+        "type": "delay",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2130,
+        "y": 1040,
+        "wires": [
+            [
+                "a2586925daf98b51"
+            ]
+        ]
+    },
+    {
+        "id": "67b55e24a4f30378",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 1700,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e6b28051399c7fa",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=12",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "Select Temperature",
+        "x": 1410,
+        "y": 1200,
+        "wires": [
+            [
+                "67b55e24a4f30378"
+            ]
+        ]
+    },
+    {
+        "id": "b10204dd8e79f33c",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=11",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "Select Pressure",
+        "x": 1420,
+        "y": 1240,
+        "wires": [
+            [
+                "67b55e24a4f30378"
+            ]
+        ]
+    },
+    {
+        "id": "cc92ebeaa5847482",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=10",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "Select Level",
+        "x": 1430,
+        "y": 1280,
+        "wires": [
+            [
+                "67b55e24a4f30378"
+            ]
+        ]
+    },
+    {
+        "id": "f37b0753da35b2ba",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=9",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "Flow",
+        "x": 1450,
+        "y": 1320,
+        "wires": [
+            [
+                "67b55e24a4f30378"
+            ]
+        ]
+    },
+    {
+        "id": "6963f52cb8419902",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=15",
+        "datatype": "String",
+        "value": "",
+        "name": "KI",
+        "x": 370,
+        "y": 660,
+        "wires": [
+            [
+                "db58b7f78b331533"
+            ]
+        ]
+    },
+    {
+        "id": "44de12420a711b88",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=16",
+        "datatype": "String",
+        "value": "",
+        "name": "KD",
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "db58b7f78b331533"
+            ]
+        ]
+    },
+    {
+        "id": "81647b92466f3415",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=14",
+        "datatype": "String",
+        "value": "",
+        "name": "KP",
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "db58b7f78b331533"
+            ]
+        ]
+    },
+    {
+        "id": "db58b7f78b331533",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 640,
+        "y": 600,
+        "wires": [
+            [
+                "31b157b818da90c5"
+            ]
+        ]
+    },
+    {
+        "id": "7b2fa1ac39a9c3f6",
+        "type": "comment",
+        "z": "cb81b7268ae839a2",
+        "name": "OPC-UA to MQTT to Software (Trends Page)",
+        "info": "",
+        "x": 490,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "413734c5d67ff83c",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "KP",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 1010,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d60ff9cb0ad36df0",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "KI",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 1010,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fa86aaa288da2be7",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "KD",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 1010,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "31b157b818da90c5",
+        "type": "switch",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "KP",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KI",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KD",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "413734c5d67ff83c"
+            ],
+            [
+                "d60ff9cb0ad36df0"
+            ],
+            [
+                "fa86aaa288da2be7"
+            ]
+        ]
+    },
+    {
+        "id": "dc7b4895a8819621",
+        "type": "inject",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1180,
+        "wires": [
+            [
+                "7a18751e3a964baf"
+            ]
+        ]
+    },
+    {
+        "id": "7a18751e3a964baf",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=5",
+        "datatype": "String",
+        "value": "",
+        "name": "Temperature",
+        "x": 370,
+        "y": 1180,
+        "wires": [
+            [
+                "e2c1df9e3814fa9e"
+            ]
+        ]
+    },
+    {
+        "id": "e2c1df9e3814fa9e",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 620,
+        "y": 1180,
+        "wires": [
+            [
+                "ba0e2ab5c68b5e4e"
+            ]
+        ]
+    },
+    {
+        "id": "ba0e2ab5c68b5e4e",
+        "type": "mqtt out",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Temperature",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9f42ad3f5730eefb",
+        "x": 830,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "fa625d542d7f3fb0",
+        "type": "mqtt in",
+        "z": "cb81b7268ae839a2",
+        "name": "",
+        "topic": "Control setpoint",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "9f42ad3f5730eefb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 1260,
+        "wires": [
+            [
+                "35656eb3bed8652b"
+            ]
+        ]
+    },
+    {
+        "id": "cf5a324812cc2878",
+        "type": "OpcUa-Client",
+        "z": "cb81b7268ae839a2",
+        "endpoint": "c200a9c9e84dc7dd",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 840,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb72c864ce0e6e45",
+        "type": "OpcUa-Item",
+        "z": "cb81b7268ae839a2",
+        "item": "ns=4;i=8",
+        "datatype": "Float",
+        "value": "",
+        "name": "Setpoint",
+        "x": 600,
+        "y": 1260,
+        "wires": [
+            [
+                "cf5a324812cc2878"
+            ]
+        ]
+    },
+    {
+        "id": "35656eb3bed8652b",
+        "type": "change",
+        "z": "cb81b7268ae839a2",
+        "name": "String to Num",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)\t",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            [
+                "eb72c864ce0e6e45"
+            ]
+        ]
+    },
+    {
+        "id": "c200a9c9e84dc7dd",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.10.10:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "9f42ad3f5730eefb",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": "1405",
+        "clientid": "node",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
